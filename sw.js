@@ -29,35 +29,30 @@ const cacheFiles = [
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('file-store-v1').then(function(cache) {
+      console.log(cache);
       return cache.addAll(cacheFiles);
+    })
+    .catch(function(err) {
+      console.log(err);
     })
   );
 });
 
 
 /*
-*Listen for fetch and retrieve from cache if present else fetch from server and store in cache
+*Listen for fetch and retrieve from cache if present else fetch
 */
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function (event) {
   event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        console.log(event.request, ' is in cache');
-        return response;
-      } else {
-        console.log(event.request, ' not found in cache');
-        return fetch(event.request)
-        .then(function(response) {
-          const cloned = response.clone();
-          caches.open('file-store-v1').then(function(cache) {
-            cache.put(event.request, cloned);
+      caches.match(event.request).then(function (response) {
+          return response || fetch(event.request)
+          .then(function(response) {
+            let copy = response.clone();
+            caches.open('file-store-v1')
+            .then(function(cache) {
+              cache.put(event.request, copy);
+            })
           })
-          return response;
-        })
-        .catch(function(err) {
-          console.log(err);
-        })
-      }
-    })
+      })
   );
-})
+});
