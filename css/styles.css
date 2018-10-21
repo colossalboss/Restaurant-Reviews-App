@@ -74,7 +74,7 @@ nav h1 a {
     list-style: none;
     background-color: #eee;
     font-size: 17px;
-    margin: 0;
+    margin: auto;
     width: 92%;
 }
 
@@ -232,7 +232,7 @@ nav h1 a {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
@@ -263,9 +263,27 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
+@media (max-width: 425px) {
+  .inside header {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .inside #footer {
+    color: #00f566;
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .inside #maincontent {
+    width: 70%;
+    margin: auto;
+  }
+}
+
 .inside header {
-  /* position: fixed; */
-  top: 0;
   width: 100%;
 }
 
@@ -284,10 +302,8 @@ nav h1 a {
 
 .inside #footer {
   color: #00f566;
-  bottom: 0;
-  position: absolute;
-  width: 93%;
-  margin-left: 2em;
+  width: 84%;
+  margin: auto;
 }
 
 #restaurant-name {
