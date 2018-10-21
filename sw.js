@@ -45,14 +45,7 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function (event) {
   event.respondWith(
       caches.match(event.request).then(function (response) {
-          return response || fetch(event.request)
-          .then(function(response) {
-            let copy = response.clone();
-            caches.open('file-store-v1')
-            .then(function(cache) {
-              cache.put(event.request, copy);
-            })
-          })
+          return response || fetch(event.request);
       })
   );
 });
