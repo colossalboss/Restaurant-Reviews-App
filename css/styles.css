@@ -39,7 +39,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  max-width: 100%;
+  max-width: 89%;
   margin: auto;
 }
 #footer {
@@ -71,12 +71,12 @@ nav h1 a {
 }
 
 #breadcrumb {
-    padding: 10px 28px 16px;
+    padding: 10px 40px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: auto;
-    width: 93%;
+    width: 92%;
 }
 
 /* Display list items side by side */
@@ -148,6 +148,7 @@ nav h1 a {
     margin: auto;
     padding: 30px 15px 60px;
     text-align: center;
+    /* align-items: center; */
     justify-content: flex-start;
   }
 
@@ -207,16 +208,17 @@ nav h1 a {
     font-family: Arial,sans-serif;
     margin: auto;
     min-height: 380px;
-    /* padding: 0 30px 25px; */
-    /* text-align: left; */
+    padding: 0 30px 25px;
+    text-align: left;
     max-width: 470px;
-    width: 100%;
+    width: 90%;
   }
 }
 
 @media (max-width: 444px) {
   .filter-options {
     display: block;
+    padding: 10px;
   }
 }
 /* ====================== Restaurant Listing ====================== */
@@ -264,19 +266,20 @@ nav h1 a {
 
 @media (max-width: 425px) {
   .inside header {
-    width: 100%;
+    width: 95%;
     margin: auto;
     overflow: hidden;
   }
 
   .inside #footer {
     color: #00f566;
-    /* width: 89%; */
+    width: 80%;
+    overflow: hidden;
     margin: auto;
   }
 
   .inside #maincontent {
-    width: 100%;
+    width: 70%;
     margin: auto;
   }
 }
@@ -288,6 +291,7 @@ nav h1 a {
 .inside #map-container {
   display: flex;
   background: blue none repeat scroll 0 0;
+  height: 300px;
   width: 100%;
 }
 
@@ -299,7 +303,7 @@ nav h1 a {
 
 .inside #footer {
   color: #00f566;
-  /* width: 100%; */
+  width: 84%;
   margin: auto;
 }
 
@@ -310,7 +314,7 @@ nav h1 a {
   font-size: 20pt;
   font-weight: 800;
   letter-spacing: 0;
-  margin: 0 0 15px;
+  margin: 0 0 30px;
   padding: 1em;
   text-transform: uppercase;
   line-height: 1.1;
@@ -344,12 +348,12 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   display: flex;
   flex-direction: column;
-  padding: 1em 3em 1em;
-  width: 79%;
+  padding: 140px 40px 30px;
+  width: 80%;
 }
 
 #reviews-container {
-  padding: 1em 3em 1em;
+  padding: 30px 40px 80px;
 }
 
 #reviews-container h2 {
@@ -392,6 +396,6 @@ nav h1 a {
 }
 
 .inside #maincontent {
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
