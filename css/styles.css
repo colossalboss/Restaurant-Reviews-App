@@ -147,7 +147,6 @@ nav h1 a {
     list-style: outside none none;
     margin: auto;
     padding: 30px 15px 60px;
-    text-align: center;
     justify-content: flex-start;
   }
 
@@ -207,8 +206,6 @@ nav h1 a {
     font-family: Arial,sans-serif;
     margin: auto;
     min-height: 380px;
-    /* padding: 0 30px 25px; */
-    /* text-align: left; */
     max-width: 470px;
     width: 100%;
   }
@@ -271,7 +268,6 @@ nav h1 a {
 
   .inside #footer {
     color: #00f566;
-    /* width: 89%; */
     margin: auto;
   }
 
@@ -299,7 +295,6 @@ nav h1 a {
 
 .inside #footer {
   color: #00f566;
-  /* width: 100%; */
   margin: auto;
 }
 
